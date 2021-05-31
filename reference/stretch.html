@@ -52,7 +52,7 @@
 <meta property="og:title" content="Stretch correlation data frame into long format. — stretch" />
 <meta property="og:description" content="stretch is a specified implementation of tidyr::gather() to be applied
 to a correlation data frame. It will gather the columns into a long-format
-data frame. The rowname column is handled automatically." />
+data frame. The term column is handled automatically." />
 <meta property="og:image" content="https://corrr.tidymodels.org/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -97,7 +97,7 @@ data frame. The rowname column is handled automatically." />
         <a class="navbar-brand" href="../index.html">corrr</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.2.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.3.9000</span>
         </div>
       </div>
     </div>
@@ -105,7 +105,7 @@ data frame. The rowname column is handled automatically." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -132,7 +132,7 @@ data frame. The rowname column is handled automatically." />
 </li>
         <li>
   <a href="https://github.com/tidymodels/corrr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -157,7 +157,7 @@ data frame. The rowname column is handled automatically." />
     <div class="ref-description">
     <p><code>stretch</code> is a specified implementation of tidyr::gather() to be applied
 to a correlation data frame. It will gather the columns into a long-format
-data frame. The rowname column is handled automatically.</p>
+data frame. The term column is handled automatically.</p>
     </div>
 
     <pre class="usage"><span class='fu'>stretch</span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>FALSE</span>, remove.dups <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
@@ -190,51 +190,51 @@ mirror is FALSE.</p></td>
 </div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Correlation method: 'pearson'</span>
 #&gt; <span class='message'>Missing treated using: 'pairwise.complete.obs'</span></div><div class='input'><span class='fu'>stretch</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>  <span class='co'># Convert all to long format</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 121 x 3</span><span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 121 x 3</span>
 #&gt;    x     y          r
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> mpg   mpg   </span><span style='color: #BB0000;'>NA</span><span>    
-#&gt; </span><span style='color: #555555;'> 2</span><span> mpg   cyl   -</span><span style='color: #BB0000;'>0.852</span><span>
-#&gt; </span><span style='color: #555555;'> 3</span><span> mpg   disp  -</span><span style='color: #BB0000;'>0.848</span><span>
-#&gt; </span><span style='color: #555555;'> 4</span><span> mpg   hp    -</span><span style='color: #BB0000;'>0.776</span><span>
-#&gt; </span><span style='color: #555555;'> 5</span><span> mpg   drat   0.681
-#&gt; </span><span style='color: #555555;'> 6</span><span> mpg   wt    -</span><span style='color: #BB0000;'>0.868</span><span>
-#&gt; </span><span style='color: #555555;'> 7</span><span> mpg   qsec   0.419
-#&gt; </span><span style='color: #555555;'> 8</span><span> mpg   vs     0.664
-#&gt; </span><span style='color: #555555;'> 9</span><span> mpg   am     0.600
-#&gt; </span><span style='color: #555555;'>10</span><span> mpg   gear   0.480
-#&gt; </span><span style='color: #555555;'># … with 111 more rows</span><span></div><div class='input'><span class='fu'>stretch</span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>  <span class='co'># omit NAs (diagonal in this case)</span>
-</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 121 x 3</span><span>
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> mpg   mpg   <span style='color: #BB0000;'>NA</span>    
+#&gt; <span style='color: #BCBCBC;'> 2</span> mpg   cyl   -<span style='color: #BB0000;'>0.852</span>
+#&gt; <span style='color: #BCBCBC;'> 3</span> mpg   disp  -<span style='color: #BB0000;'>0.848</span>
+#&gt; <span style='color: #BCBCBC;'> 4</span> mpg   hp    -<span style='color: #BB0000;'>0.776</span>
+#&gt; <span style='color: #BCBCBC;'> 5</span> mpg   drat   0.681
+#&gt; <span style='color: #BCBCBC;'> 6</span> mpg   wt    -<span style='color: #BB0000;'>0.868</span>
+#&gt; <span style='color: #BCBCBC;'> 7</span> mpg   qsec   0.419
+#&gt; <span style='color: #BCBCBC;'> 8</span> mpg   vs     0.664
+#&gt; <span style='color: #BCBCBC;'> 9</span> mpg   am     0.600
+#&gt; <span style='color: #BCBCBC;'>10</span> mpg   gear   0.480
+#&gt; <span style='color: #949494;'># … with 111 more rows</span></div><div class='input'><span class='fu'>stretch</span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>  <span class='co'># omit NAs (diagonal in this case)</span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 121 x 3</span>
 #&gt;    x     y          r
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> mpg   mpg   </span><span style='color: #BB0000;'>NA</span><span>    
-#&gt; </span><span style='color: #555555;'> 2</span><span> mpg   cyl   -</span><span style='color: #BB0000;'>0.852</span><span>
-#&gt; </span><span style='color: #555555;'> 3</span><span> mpg   disp  -</span><span style='color: #BB0000;'>0.848</span><span>
-#&gt; </span><span style='color: #555555;'> 4</span><span> mpg   hp    -</span><span style='color: #BB0000;'>0.776</span><span>
-#&gt; </span><span style='color: #555555;'> 5</span><span> mpg   drat   0.681
-#&gt; </span><span style='color: #555555;'> 6</span><span> mpg   wt    -</span><span style='color: #BB0000;'>0.868</span><span>
-#&gt; </span><span style='color: #555555;'> 7</span><span> mpg   qsec   0.419
-#&gt; </span><span style='color: #555555;'> 8</span><span> mpg   vs     0.664
-#&gt; </span><span style='color: #555555;'> 9</span><span> mpg   am     0.600
-#&gt; </span><span style='color: #555555;'>10</span><span> mpg   gear   0.480
-#&gt; </span><span style='color: #555555;'># … with 111 more rows</span><span></div><div class='input'>
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> mpg   mpg   <span style='color: #BB0000;'>NA</span>    
+#&gt; <span style='color: #BCBCBC;'> 2</span> mpg   cyl   -<span style='color: #BB0000;'>0.852</span>
+#&gt; <span style='color: #BCBCBC;'> 3</span> mpg   disp  -<span style='color: #BB0000;'>0.848</span>
+#&gt; <span style='color: #BCBCBC;'> 4</span> mpg   hp    -<span style='color: #BB0000;'>0.776</span>
+#&gt; <span style='color: #BCBCBC;'> 5</span> mpg   drat   0.681
+#&gt; <span style='color: #BCBCBC;'> 6</span> mpg   wt    -<span style='color: #BB0000;'>0.868</span>
+#&gt; <span style='color: #BCBCBC;'> 7</span> mpg   qsec   0.419
+#&gt; <span style='color: #BCBCBC;'> 8</span> mpg   vs     0.664
+#&gt; <span style='color: #BCBCBC;'> 9</span> mpg   am     0.600
+#&gt; <span style='color: #BCBCBC;'>10</span> mpg   gear   0.480
+#&gt; <span style='color: #949494;'># … with 111 more rows</span></div><div class='input'>
 <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='shave.html'>shave</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>  <span class='co'># use shave to set upper triangle to NA and then...</span>
 <span class='fu'>stretch</span><span class='op'>(</span><span class='va'>x</span>, na.rm <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>  <span class='co'># omit all NAs, therefore keeping each</span>
-</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 121 x 3</span><span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 121 x 3</span>
 #&gt;    x     y          r
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> mpg   mpg   </span><span style='color: #BB0000;'>NA</span><span>    
-#&gt; </span><span style='color: #555555;'> 2</span><span> mpg   cyl   -</span><span style='color: #BB0000;'>0.852</span><span>
-#&gt; </span><span style='color: #555555;'> 3</span><span> mpg   disp  -</span><span style='color: #BB0000;'>0.848</span><span>
-#&gt; </span><span style='color: #555555;'> 4</span><span> mpg   hp    -</span><span style='color: #BB0000;'>0.776</span><span>
-#&gt; </span><span style='color: #555555;'> 5</span><span> mpg   drat   0.681
-#&gt; </span><span style='color: #555555;'> 6</span><span> mpg   wt    -</span><span style='color: #BB0000;'>0.868</span><span>
-#&gt; </span><span style='color: #555555;'> 7</span><span> mpg   qsec   0.419
-#&gt; </span><span style='color: #555555;'> 8</span><span> mpg   vs     0.664
-#&gt; </span><span style='color: #555555;'> 9</span><span> mpg   am     0.600
-#&gt; </span><span style='color: #555555;'>10</span><span> mpg   gear   0.480
-#&gt; </span><span style='color: #555555;'># … with 111 more rows</span><span></div><div class='input'>                             <span class='co'># correlation only once.</span>
-</div></span></pre>
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span> <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>  <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span> mpg   mpg   <span style='color: #BB0000;'>NA</span>    
+#&gt; <span style='color: #BCBCBC;'> 2</span> mpg   cyl   -<span style='color: #BB0000;'>0.852</span>
+#&gt; <span style='color: #BCBCBC;'> 3</span> mpg   disp  -<span style='color: #BB0000;'>0.848</span>
+#&gt; <span style='color: #BCBCBC;'> 4</span> mpg   hp    -<span style='color: #BB0000;'>0.776</span>
+#&gt; <span style='color: #BCBCBC;'> 5</span> mpg   drat   0.681
+#&gt; <span style='color: #BCBCBC;'> 6</span> mpg   wt    -<span style='color: #BB0000;'>0.868</span>
+#&gt; <span style='color: #BCBCBC;'> 7</span> mpg   qsec   0.419
+#&gt; <span style='color: #BCBCBC;'> 8</span> mpg   vs     0.664
+#&gt; <span style='color: #BCBCBC;'> 9</span> mpg   am     0.600
+#&gt; <span style='color: #BCBCBC;'>10</span> mpg   gear   0.480
+#&gt; <span style='color: #949494;'># … with 111 more rows</span></div><div class='input'>                             <span class='co'># correlation only once.</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

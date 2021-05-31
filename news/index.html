@@ -94,7 +94,7 @@
         <a class="navbar-brand" href="../index.html">corrr</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.2.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.4.3.9000</span>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -129,7 +129,7 @@
 </li>
         <li>
   <a href="https://github.com/tidymodels/corrr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -150,9 +150,17 @@
       <small>Source: <a href='https://github.com/tidymodels/corrr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="corrr-0429000" class="section level1">
-<h1 class="page-header" data-toc-text="0.4.2.9000">
-<a href="#corrr-0429000" class="anchor"></a>corrr 0.4.2.9000<small> Unreleased </small>
+    <div id="corrr-development-version" class="section level1">
+<h1 class="page-header" data-toc-text="development version">
+<a href="#corrr-development-version" class="anchor"></a>corrr (development version)<small> Unreleased </small>
+</h1>
+<ul>
+<li>Make <code><a href="../reference/colpair_map.html">colpair_map()</a></code> more robust to input column names, with the exception of “.data” and “.env” (<a href='https://github.com/jameslairdsmith'>@jameslairdsmith</a>, <a href='https://github.com/tidymodels/corrr/issues/131'>#131</a>).</li>
+</ul>
+</div>
+    <div id="corrr-043" class="section level1">
+<h1 class="page-header" data-toc-text="0.4.3">
+<a href="#corrr-043" class="anchor"></a>corrr 0.4.3<small> 2020-11-24 </small>
 </h1>
 <ul>
 <li><p>Fix EOL issues and class attribute (<a href='https://github.com/krlmlr'>@krlmlr</a>, <a href='https://github.com/tidymodels/corrr/issues/93'>#93</a> and <a href='https://github.com/tidymodels/corrr/issues/90'>#90</a>)</p></li>
@@ -162,6 +170,7 @@
 <li><p>New <code><a href="../reference/colpair_map.html">colpair_map()</a></code> allows for column comparisons using the values returned by an arbitrary function (<a href='https://github.com/jameslairdsmith'>@jameslairdsmith</a>, <a href='https://github.com/tidymodels/corrr/issues/94'>#94</a>).</p></li>
 <li><p><code><a href="../reference/correlate.html">correlate()</a></code> now works with single-column data.frames and numeric vectors (<a href='https://github.com/antoine-sachet'>@antoine-sachet</a>, <a href='https://github.com/tidymodels/corrr/issues/122'>#122</a>). Note the <code>diagonal</code> argument is ignored in these 2 cases.</p></li>
 <li><p><code><a href="../reference/network_plot.html">network_plot()</a></code> now works with <code>cor_df</code> objects with only 1 or 2 columns (<a href='https://github.com/antoine-sachet'>@antoine-sachet</a>, <a href='https://github.com/tidymodels/corrr/issues/122'>#122</a>)</p></li>
+<li><p>The first column of a <code>cor_df</code> object is now named “term”. Previously it was named “rowname” (<a href='https://github.com/thisisdaryn'>@thisisdaryn</a>, <a href='https://github.com/tidymodels/corrr/issues/117'>#117</a>).</p></li>
 </ul>
 </div>
     <div id="corrr-042" class="section level1">
@@ -221,7 +230,7 @@
 <div id="small-breaking-changes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#small-breaking-changes" class="anchor"></a>Small breaking changes</h2>
-<p>The <code>diagonal</code> argument of <code>as_matrix</code> and <code>as_matrix.cor_df</code> is now an optional argument rather than set to <code>1</code> by default <a href="https://github.com/drsimonj/corrr/issues/52"><a href='https://github.com/tidymodels/corrr/issues/52'>#52</a></a></p>
+<p>The <code>diagonal</code> argument of <code>as_matrix</code> and <code>as_matrix.cor_df</code> is now an optional argument rather than set to <code>1</code> by default <a href="https://github.com/tidymodels/corrr/issues/52"><a href='https://github.com/tidymodels/corrr/issues/52'>#52</a></a></p>
 </div>
 <div id="new-functions" class="section level2">
 <h2 class="hasAnchor">
